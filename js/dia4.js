@@ -11,3 +11,14 @@ function Aprop() {
     console.log(`El numero més proper a 100 és ${a}`);
   }
 }
+
+function Data() {
+  let hora = parseInt(prompt('Hora'));
+  let minuts = parseInt(prompt('Minuts'));
+  let segons = parseInt(prompt('Segons'));
+  let d = new Date();
+  d.setHours(hora);
+  d.setMinutes(minuts);
+  d.setSeconds(segons+1);
+  console.log(`Hora:  ${d.getHours()}: ${d.getMinutes()}: ${d.getSeconds()}`)
+}
