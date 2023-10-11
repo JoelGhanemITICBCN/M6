@@ -1,1 +1,1 @@
-# M6
+# M6 Desenvolupament d'entorn client
