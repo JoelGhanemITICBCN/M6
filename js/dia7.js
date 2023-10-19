@@ -46,10 +46,10 @@ function piramide() {
   let files = (columnes/2)+1;
   let t = document.createElement("table");
 
-  for (let i =0; i < files-1; i++){
+  for (let i = 1; i < files; i++){
     let tr = document.createElement("tr");
 
-    for(let j =columnes; j >= 0; j--){
+    for(let j = columnes/2; j >= 0; j--){
       let td = document.createElement("td");
 
       if( j <= i) {
@@ -64,24 +64,24 @@ function piramide() {
         tr.appendChild(td);
       }
     }
-
-    for(let j = 0; j <= columnes/2; j++){
+    //SEGUNDA MITAD, IMPRIMO DE LA PUNTA PARA LA DERECHA
+    for(let j = 0; j < (columnes/2)-1; j++){
       let td = document.createElement("td");
 
-      if( j >= i) {
+      if( j+1 >= i) {
         td.style.width="20px";
         td.style.height="20px";
-        td.style.backgroundColor="red";
+        td.style.backgroundColor="blue";
         tr.appendChild(td);
       } else {
         td.style.width="20px";
         td.style.height="20px";
-        td.style.backgroundColor="green";
+        td.style.backgroundColor="purple";
         tr.appendChild(td);
       }
       t.appendChild(tr);
     }
-        document.body.appendChild(t);
+    document.body.appendChild(t);
   }
   //columnas
 }
