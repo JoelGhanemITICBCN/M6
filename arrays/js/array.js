@@ -25,3 +25,59 @@ if (index !== -1) {
   colors.splice(index, 1);
 }
 document.write("<p>Array després d'eliminar 'verd': " + colors + "</p>");
+
+// at()
+let indexN = 2;
+document.write(`at(${index}) -> ${colors.at(index)}<br>`);
+
+// concat()
+let otroArray = ['rosa', 'morado'];
+document.write(`concat(['rosa', 'morado']) -> ${colors.concat(otroArray)}<br>`);
+
+// copyWithin()
+document.write(`copyWithin(0, 3, 4) -> ${colors.copyWithin(0, 3, 4)}<br>`);
+
+// entries()
+let iterator = colors.entries();
+for (let entry of iterator) {
+  document.write(`entries() -> ${entry}<br>`);
+}
+
+// every()
+let testFunc = (color) => color.length > 3;
+document.write(`every(color => color.length > 3) -> ${colors.every(testFunc)}<br>`);
+
+// fill()
+document.write(`fill('rojo') -> ${colors.fill('rojo')}<br>`);
+
+// filter()
+let filterFunc = (color) => color.length > 4;
+document.write(`filter(color => color.length > 4) -> ${colors.filter(filterFunc)}<br>`);
+
+// find()
+let findFunc = (color) => color === 'blau';
+document.write(`find(color => color === 'blau') -> ${colors.find(findFunc)}<br>`);
+
+// findIndex()
+let findIndexFunc = (color) => color === 'blau';
+document.write(`findIndex(color => color === 'blau') -> ${colors.findIndex(findIndexFunc)}<br>`);
+
+// flat()
+let nestedArray = ['verd', ['vermell', 'groc'], 'blau'];
+document.write(`flat() -> ${nestedArray.flat()}<br>`);
+
+// flatMap()
+let mapperFunc = (color) => [color, 'gris'];
+document.write(`flatMap(color => [color, 'gris']) -> ${colors.flatMap(mapperFunc)}<br>`);
+
+// forEach()
+colors.forEach((color) => document.write(`forEach() -> ${color}<br>`));
+
+// from()
+document.write(`from('hola') -> ${Array.from('hola')}<br>`);
+
+// includes()
+document.write(`includes('blau') -> ${colors.includes('blau')}<br>`);
+
+// indexOf()
+document.write(`indexOf('blau') -> ${colors.indexOf('blau')}<br>`);
